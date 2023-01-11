@@ -50,7 +50,6 @@
   <ItemGroup>
     <Reference Include="Aspose.PDF, Version=22.12.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
       <HintPath>..\packages\Aspose.PDF.22.12.0\lib\net4.0\Aspose.PDF.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="SautinSoft.PdfFocus, Version=8.5.10.20, Culture=neutral, PublicKeyToken=0b79b934109b3e9e, processorArchitecture=MSIL">
       <HintPath>..\packages\sautinsoft.pdffocus.8.5.10.20\lib\net472\SautinSoft.PdfFocus.dll</HintPath>

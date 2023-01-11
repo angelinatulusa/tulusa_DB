@@ -44,6 +44,7 @@
             this.test_lbl = new System.Windows.Forms.Label();
             this.kassa_btn = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.hind_num)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kogus_num)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -219,16 +220,27 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(791, 235);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(95, 20);
+            this.checkBox1.Size = new System.Drawing.Size(68, 20);
             this.checkBox1.TabIndex = 40;
             this.checkBox1.Text = "Sodus";
             this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(791, 262);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(95, 20);
+            this.checkBox2.TabIndex = 41;
+            this.checkBox2.Text = "kilekott";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // kassa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.kassa_btn);
             this.Controls.Add(this.test_lbl);
@@ -275,5 +287,6 @@
         private System.Windows.Forms.Label test_lbl;
         private System.Windows.Forms.Button kassa_btn;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }

@@ -34,7 +34,7 @@ namespace DB_tulusa
         {
             document = new Document();//using Aspose.Pdf
             var page = document.Pages.Add();
-            page.Paragraphs.Add(new Aspose.Pdf.Text.TextFragment("Toode      Hind      Kogus      Summa      Sodus"));
+            page.Paragraphs.Add(new Aspose.Pdf.Text.TextFragment("Toode      Hind      Kogus      Summa      Sodus      Kilekott"));
             foreach (var toode in Tooded_list)
             {
                 page.Paragraphs.Add(new Aspose.Pdf.Text.TextFragment(toode));
@@ -79,17 +79,25 @@ namespace DB_tulusa
         {
             Tooded_list.Add("___________________________________________");
 
-            if (checkBox1.Checked==true)
+            if (checkBox2.Checked==true)
             {
-                double sodus = (s.Next(50) / 100.0);
-                Tooded_list.Add((test_lbl.Text + "             " + hind_num.Text + "             " + kogus_num.Text + "             " + (sodus * Convert.ToInt32(kogus_num.Text.ToString()) * Convert.ToInt32(hind_num.Text.ToString())).ToString() + "             " + sodus));
+                double kott=0.30;
+                if (checkBox1.Checked==true)
+                {
+                    double sodus = (s.Next(50) / 100.0);
+                    Tooded_list.Add((test_lbl.Text + "             " + hind_num.Text + "             " + kogus_num.Text + "             " + (kott + sodus * Convert.ToInt32(kogus_num.Text.ToString()) * Convert.ToInt32(hind_num.Text.ToString())).ToString() + "             " + sodus + "             " + kott));
+                }
+                else if (checkBox1.Checked == false)
+                {
+                    Tooded_list.Add((test_lbl.Text + "             " + hind_num.Text + "             " + kogus_num.Text + "             " + (kott + Convert.ToInt32(kogus_num.Text.ToString()) * Convert.ToInt32(hind_num.Text.ToString()))).ToString() + "             " + kott);
+                }
             }
-            else if (checkBox1.Checked == false)
+            else if (checkBox2.Checked == false)
             {
                 Tooded_list.Add((test_lbl.Text + "             " + hind_num.Text + "             " + kogus_num.Text + "             " + (Convert.ToInt32(kogus_num.Text.ToString()) * Convert.ToInt32(hind_num.Text.ToString()))).ToString());
             }
-            
-    
+
+
         }
 
         private void Kustuta_btn_Click(object sender, EventArgs e)
@@ -162,7 +170,6 @@ namespace DB_tulusa
             kat kassa = new kat();
             kassa.ShowDialog();
         }
-
         public void Naita_Kat()
         {
             connect.Open();
