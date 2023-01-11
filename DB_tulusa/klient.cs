@@ -25,6 +25,7 @@ namespace DB_tulusa
         TabControl kategooriad;
         SqlDataAdapter failinimi_adap;
         PictureBox pictureBox;
+        Random s = new Random();
         public klient()
         {
             InitializeComponent();
@@ -69,7 +70,24 @@ namespace DB_tulusa
         private void lisa_btn_Click(object sender, EventArgs e)
         {
             Tooded_list.Add("___________________________________");
-            Tooded_list.Add((test_lbl.Text + "             " + hind_num.Text + "             " + kogus_num.Text + "             " + (Convert.ToInt32(kogus_num.Text.ToString()) * Convert.ToInt32(hind_num.Text.ToString()))).ToString());
+            if (checkBox2.Checked == true)
+            {
+                double kott = 0.30;
+                if (checkBox1.Checked == true)
+                {
+                    double sodus = (s.Next(50) / 100.0);
+                    Tooded_list.Add((test_lbl.Text + "             " + hind_num.Text + "             " + kogus_num.Text + "             " + (kott + sodus * Convert.ToInt32(kogus_num.Text.ToString()) * Convert.ToInt32(hind_num.Text.ToString())).ToString() + "             " + sodus + "             " + kott));
+                }
+                else if (checkBox1.Checked == false)
+                {
+                    Tooded_list.Add((test_lbl.Text + "             " + hind_num.Text + "             " + kogus_num.Text + "             " + (kott + Convert.ToInt32(kogus_num.Text.ToString()) * Convert.ToInt32(hind_num.Text.ToString()))).ToString() + "             " + kott);
+                }
+            }
+            else if (checkBox2.Checked == false)
+            {
+                Tooded_list.Add((test_lbl.Text + "             " + hind_num.Text + "             " + kogus_num.Text + "             " + (Convert.ToInt32(kogus_num.Text.ToString()) * Convert.ToInt32(hind_num.Text.ToString()))).ToString());
+            }
+            //Tooded_list.Add((test_lbl.Text + "             " + hind_num.Text + "             " + kogus_num.Text + "             " + (Convert.ToInt32(kogus_num.Text.ToString()) * Convert.ToInt32(hind_num.Text.ToString()))).ToString());
         }
         private void Kustuta_btn_Click(object sender, EventArgs e)
         {

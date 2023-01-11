@@ -39,6 +39,8 @@
             this.lisa_btn = new System.Windows.Forms.Button();
             this.Kustuta_btn = new System.Windows.Forms.Button();
             this.test_lbl = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.hind_num)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kogus_num)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -48,7 +50,7 @@
             // hind_num
             // 
             this.hind_num.Location = new System.Drawing.Point(477, 153);
-            this.hind_num.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hind_num.Margin = new System.Windows.Forms.Padding(4);
             this.hind_num.Name = "hind_num";
             this.hind_num.Size = new System.Drawing.Size(130, 22);
             this.hind_num.TabIndex = 31;
@@ -56,7 +58,7 @@
             // kogus_num
             // 
             this.kogus_num.Location = new System.Drawing.Point(477, 105);
-            this.kogus_num.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kogus_num.Margin = new System.Windows.Forms.Padding(4);
             this.kogus_num.Name = "kogus_num";
             this.kogus_num.Size = new System.Drawing.Size(130, 22);
             this.kogus_num.TabIndex = 30;
@@ -66,7 +68,7 @@
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(99, 306);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(456, 219);
@@ -77,7 +79,7 @@
             // 
             this.tsekk_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.tsekk_btn.Location = new System.Drawing.Point(303, 206);
-            this.tsekk_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tsekk_btn.Margin = new System.Windows.Forms.Padding(4);
             this.tsekk_btn.Name = "tsekk_btn";
             this.tsekk_btn.Size = new System.Drawing.Size(153, 37);
             this.tsekk_btn.TabIndex = 25;
@@ -89,7 +91,7 @@
             // 
             this.toode_pbox.BackColor = System.Drawing.SystemColors.Control;
             this.toode_pbox.Location = new System.Drawing.Point(33, 23);
-            this.toode_pbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.toode_pbox.Margin = new System.Windows.Forms.Padding(4);
             this.toode_pbox.Name = "toode_pbox";
             this.toode_pbox.Size = new System.Drawing.Size(248, 244);
             this.toode_pbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -132,7 +134,7 @@
             // lisa_btn
             // 
             this.lisa_btn.Location = new System.Drawing.Point(477, 206);
-            this.lisa_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lisa_btn.Margin = new System.Windows.Forms.Padding(4);
             this.lisa_btn.Name = "lisa_btn";
             this.lisa_btn.Size = new System.Drawing.Size(130, 37);
             this.lisa_btn.TabIndex = 32;
@@ -144,8 +146,8 @@
             // 
             this.Kustuta_btn.BackColor = System.Drawing.Color.IndianRed;
             this.Kustuta_btn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Kustuta_btn.Location = new System.Drawing.Point(410, 251);
-            this.Kustuta_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Kustuta_btn.Location = new System.Drawing.Point(303, 251);
+            this.Kustuta_btn.Margin = new System.Windows.Forms.Padding(4);
             this.Kustuta_btn.Name = "Kustuta_btn";
             this.Kustuta_btn.Size = new System.Drawing.Size(116, 36);
             this.Kustuta_btn.TabIndex = 33;
@@ -163,11 +165,33 @@
             this.test_lbl.TabIndex = 34;
             this.test_lbl.Text = "   ";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(477, 251);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(95, 20);
+            this.checkBox1.TabIndex = 35;
+            this.checkBox1.Text = "sodus";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(477, 278);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(95, 20);
+            this.checkBox2.TabIndex = 36;
+            this.checkBox2.Text = "kilekott";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
             // klient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(661, 554);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.test_lbl);
             this.Controls.Add(this.Kustuta_btn);
             this.Controls.Add(this.lisa_btn);
@@ -179,7 +203,7 @@
             this.Controls.Add(this.Hind_lbl);
             this.Controls.Add(this.Kogus_lbl);
             this.Controls.Add(this.Toode_lbl);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "klient";
             this.Text = "kassa";
             ((System.ComponentModel.ISupportInitialize)(this.hind_num)).EndInit();
@@ -204,5 +228,7 @@
         private System.Windows.Forms.Button lisa_btn;
         private System.Windows.Forms.Button Kustuta_btn;
         private System.Windows.Forms.Label test_lbl;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
